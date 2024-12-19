@@ -26,7 +26,7 @@ jobs:
         cp -R dist/entrypoints release/list-entrypoints/dist/
 
     - name: List project entrypoints
-      uses: ./release/list-entrypoints
+      uses: release/list-entrypoints
       with:
         api_token: ${{ secrets.NEXPLOIT_TOKEN }}
         name: GitHub run ${{ github.sha }}

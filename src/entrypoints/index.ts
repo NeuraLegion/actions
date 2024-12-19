@@ -62,12 +62,9 @@ async function listEntrypoints(config: ListEntryPoints): Promise<EntryPoint[]> {
       url.searchParams.set("nextCreatedAt", nextCreatedAt);
     }
 
-    console.log("----->", url.toString());
-
     const resp = await client.get(url.toString());
 
     const body = await resp.readBody();
-    console.log("====>", body);
 
     const dataItems : { items: EntryPoint[] } = JSON.parse(body);
 

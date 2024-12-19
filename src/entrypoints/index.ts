@@ -69,9 +69,9 @@ async function listEntrypoints(config: ListEntryPoints): Promise<EntryPoint[]> {
     const body = await resp.readBody();
     console.log("====>", body);
 
-    const {
-      data: { items = [] },
-    } = JSON.parse(body);
+    const dataItems : { items: EntryPoint[] } = JSON.parse(body);
+
+    const items = dataItems.items;
 
     if (!items.length) {
       break;

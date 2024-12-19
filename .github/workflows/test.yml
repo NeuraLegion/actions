@@ -22,7 +22,7 @@ jobs:
       run: |
         mkdir release
         cp README.md release/
-        cp list-entrypoints release/
+        cp -R list-entrypoints release/
         cp -R dist/ release/dist/
 
     - name: List project entrypoints

@@ -23,7 +23,7 @@ jobs:
         mkdir release
         cp README.md release/
         cp -R list-entrypoints release/
-        cp -R dist/entrypoints release/list-entrypoints/dist
+        cp -R dist/entrypoints release/list-entrypoints/dist/
 
     - name: List project entrypoints
       uses: ./release/list-entrypoints
